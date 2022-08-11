@@ -7,13 +7,13 @@ API desarrollada con NodeJS, Express, JWT y MongoDB como base de datos.
 _1- Clonar el proyecto._
 
 ```
-git clone https://github.com/djoako22/login_api_starter.git
+git clone https://github.com/djoako22/sistema-de-usuarios-API.git
 ```
 
 _2- Instalar las dependencias._
 
 ```
-cd login_api_starter
+cd sistema-de-usuarios-API
 npm install
 ```
 
