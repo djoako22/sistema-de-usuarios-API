@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
@@ -7,8 +8,12 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // Parse json
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(
+    bodyParser.urlencoded({
+        extended: false,
+    })
+);
 // Cors
 app.use(cors());
 
@@ -16,6 +21,9 @@ app.use(cors());
 app.use("/api", require("./routes/auth.route"));
 app.use("/api", require("./routes/user.route"));
 app.use("/api", require("./routes/admin.route"));
+
+// Images path
+app.use("/uploads", express.static("./uploads"));
 
 // Connect to DB
 mongoose.connect(process.env.URL_DB, (err) => {
@@ -32,5 +40,7 @@ app.get("/", (req, res) => {
 app.use(require("./middlewares/error.middleware"));
 
 app.listen(process.env.PORT, () => {
-    console.log(`Server running on port ${process.env.PORT}, url: ${process.env.URL}:${process.env.PORT}`);
+    console.log(
+        `Server running on port ${process.env.PORT}, url: ${process.env.URL}:${process.env.PORT}`
+    );
 });

@@ -15,7 +15,7 @@ const getUser = async (req, res, next) => {
 };
 
 const updateUser = async (req, res, next) => {
-    const { username, password, status, role } = req.body;
+    const { username, email, password, status, role, image } = req.body;
     let passwordHash;
 
     // Verify that they do not change the role of the "admin"
@@ -23,8 +23,8 @@ const updateUser = async (req, res, next) => {
     if (user.username === "admin" && role !== "ADMIN")
         return res.status(400).json({ error: "Admin user can't be updated" });
 
-    if (username <= 0 || password <= 0)
-        return res.status(400).json({ error: "Username or password is incorrect" });
+    if (!username || !email || !password)
+        return res.status(401).json({ error: "Complete all fields" });
 
     if (await User.findOne({ username }))
         return res.status(400).json({ error: "Username already exists" });
@@ -37,9 +37,11 @@ const updateUser = async (req, res, next) => {
 
         const user = await User.findByIdAndUpdate(req.params.id, {
             username,
+            email,
             password: passwordHash,
             status,
             role,
+            image,
         });
 
         if (!user) return res.status(404).json({ error: "User not found" });

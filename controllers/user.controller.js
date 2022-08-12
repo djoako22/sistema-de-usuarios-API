@@ -1,6 +1,7 @@
 const User = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const fs = require("fs");
 
 const getAccount = async (req, res, next) => {
     const user = await User.findById(req.user.id);
@@ -15,11 +16,17 @@ const getAccount = async (req, res, next) => {
 };
 
 const updateAccount = async (req, res, next) => {
-    const { username, password } = req.body;
+    const { username, email, password } = req.body;
     let passwordHash;
+    const image = "/" + req.file.path.replace(/\\/g, "/");
 
-    if (req.user.username === "admin")
-        return res.status(400).json({ error: "Admin user can't be updated" });
+    // Delete old image
+    if (req.user.image) {
+        fs.unlinkSync("." + req.user.image);
+    }
+
+    // if (req.user.username === "admin")
+    //     return res.status(400).json({ error: "Admin user can't be updated" });
 
     try {
         if (password) {
@@ -29,7 +36,9 @@ const updateAccount = async (req, res, next) => {
 
         const user = await User.findByIdAndUpdate(req.user.id, {
             username,
+            email,
             password: passwordHash,
+            image,
         });
 
         if (!user) return res.status(404).json({ error: "User not found" });

@@ -35,10 +35,10 @@ const login = async (req, res, next) => {
 };
 
 const signup = async (req, res, next) => {
-    const { username, password } = req.body;
+    const { username, email, password } = req.body;
 
-    if (!username || !password)
-        return res.status(401).json({ error: "Username or password is incorrect" });
+    if (!username || !email || !password)
+        return res.status(401).json({ error: "Complete all fields" });
 
     if (await User.findOne({ username }))
         return res.status(400).json({ error: "Username already exists" });
@@ -49,6 +49,7 @@ const signup = async (req, res, next) => {
 
         const newUser = await User.create({
             username,
+            email,
             password: passwordHash,
         });
         res.json({ user: newUser.hiddenFields() });
