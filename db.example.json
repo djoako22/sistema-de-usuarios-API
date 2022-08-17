@@ -8,7 +8,8 @@
         "role": "ADMIN",
         "createdAt": { "$date": { "$numberLong": "1660335455862" } },
         "updatedAt": { "$date": { "$numberLong": "1660335534237" } },
-        "__v": { "$numberInt": 0 }
+        "__v": { "$numberInt": 0 },
+        "image": "/uploads/0.png"
     },
     {
         "_id": { "$oid": "62f6be043d365e872fb27074" },
