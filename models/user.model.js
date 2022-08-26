@@ -7,12 +7,13 @@ let userSchema = new mongoose.Schema(
         password: String,
         status: {
             type: String,
-            default: "INACTIVE",
+            enum: ["active", "inactive"],
+            default: "inactive",
         },
         role: {
             type: String,
-            enum: ["USER", "ADMIN"],
-            default: "USER",
+            enum: ["user", "admin"],
+            default: "user",
         },
         image: String,
         imageOauth: String,
@@ -25,7 +26,7 @@ let userSchema = new mongoose.Schema(
 );
 
 userSchema.methods.hiddenFields = function () {
-    delete this.password;
+    if (this.password) delete this.password;
     return this;
 };
 
