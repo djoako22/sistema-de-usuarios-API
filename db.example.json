@@ -9,7 +9,8 @@
         "createdAt": { "$date": { "$numberLong": "1660335455862" } },
         "updatedAt": { "$date": { "$numberLong": "1660335534237" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/0.png"
+        "image": "/uploads/0.png",
+        "emailVerified": true
     },
     {
         "_id": { "$oid": "62f6be043d365e872fb27074" },
@@ -21,7 +22,8 @@
         "createdAt": { "$date": { "$numberLong": "1660337668824" } },
         "updatedAt": { "$date": { "$numberLong": "1660338202871" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/1.jpg"
+        "image": "/uploads/1.jpg",
+        "emailVerified": true
     },
     {
         "_id": { "$oid": "62f6c027fb0a30c0d206ad1c" },
@@ -33,7 +35,8 @@
         "createdAt": { "$date": { "$numberLong": "1660338215813" } },
         "updatedAt": { "$date": { "$numberLong": "1660338259834" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/2.jpg"
+        "image": "/uploads/2.jpg",
+        "emailVerified": true
     },
     {
         "_id": { "$oid": "62f6c066fb0a30c0d206ad29" },
@@ -45,7 +48,8 @@
         "createdAt": { "$date": { "$numberLong": "1660338278135" } },
         "updatedAt": { "$date": { "$numberLong": "1660338312054" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/3.jpg"
+        "image": "/uploads/3.jpg",
+        "emailVerified": true
     },
     {
         "_id": { "$oid": "62f6c095fb0a30c0d206ad36" },
@@ -57,7 +61,8 @@
         "createdAt": { "$date": { "$numberLong": "1660338325620" } },
         "updatedAt": { "$date": { "$numberLong": "1660338361527" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/4.jpg"
+        "image": "/uploads/4.jpg",
+        "emailVerified": true
     },
     {
         "_id": { "$oid": "62f6c0c9fb0a30c0d206ad43" },
@@ -69,7 +74,8 @@
         "createdAt": { "$date": { "$numberLong": "1660338377324" } },
         "updatedAt": { "$date": { "$numberLong": "1660338484867" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/5.jpg"
+        "image": "/uploads/5.jpg",
+        "emailVerified": true
     },
     {
         "_id": { "$oid": "62f6c1a7fb0a30c0d206ad50" },
@@ -81,6 +87,7 @@
         "createdAt": { "$date": { "$numberLong": "1660338599350" } },
         "updatedAt": { "$date": { "$numberLong": "1660338627882" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/6.jpg"
+        "image": "/uploads/6.jpg",
+        "emailVerified": true
     }
 ]

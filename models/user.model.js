@@ -21,6 +21,10 @@ let userSchema = new mongoose.Schema(
         google: String,
         facebook: String,
         github: String,
+
+        emailVerified: { type: Boolean, default: false },
+        emailVerificationToken: String,
+        passwordResetToken: String,
     },
     { timestamps: true }
 );

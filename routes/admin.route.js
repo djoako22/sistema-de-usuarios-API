@@ -11,11 +11,11 @@ const {
 const { verifyToken, checkRole } = require("../middlewares/auth.middleware");
 
 router
-    .route("/users")
+    .route("/users/all")
     .get(verifyToken, checkRole(["admin"]), getUsers)
     .delete(verifyToken, checkRole(["admin"]), deleteUsers);
 router
-    .route("/user/:id")
+    .route("/users/:id")
     .get(verifyToken, checkRole(["admin"]), getUser)
     .put(verifyToken, checkRole(["admin"]), updateUser)
     .delete(verifyToken, checkRole(["admin"]), deleteUser);
