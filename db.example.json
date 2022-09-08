@@ -9,7 +9,7 @@
         "createdAt": { "$date": { "$numberLong": "1660335455862" } },
         "updatedAt": { "$date": { "$numberLong": "1660335534237" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/0.png",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/0.png",
         "emailVerified": true
     },
     {
@@ -22,7 +22,7 @@
         "createdAt": { "$date": { "$numberLong": "1660337668824" } },
         "updatedAt": { "$date": { "$numberLong": "1660338202871" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/1.jpg",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/1.jpg",
         "emailVerified": true
     },
     {
@@ -35,7 +35,7 @@
         "createdAt": { "$date": { "$numberLong": "1660338215813" } },
         "updatedAt": { "$date": { "$numberLong": "1660338259834" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/2.jpg",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/2.jpg",
         "emailVerified": true
     },
     {
@@ -48,7 +48,7 @@
         "createdAt": { "$date": { "$numberLong": "1660338278135" } },
         "updatedAt": { "$date": { "$numberLong": "1660338312054" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/3.jpg",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/3.jpg",
         "emailVerified": true
     },
     {
@@ -61,7 +61,7 @@
         "createdAt": { "$date": { "$numberLong": "1660338325620" } },
         "updatedAt": { "$date": { "$numberLong": "1660338361527" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/4.jpg",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/4.jpg",
         "emailVerified": true
     },
     {
@@ -74,7 +74,7 @@
         "createdAt": { "$date": { "$numberLong": "1660338377324" } },
         "updatedAt": { "$date": { "$numberLong": "1660338484867" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/5.jpg",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/5.jpg",
         "emailVerified": true
     },
     {
@@ -87,7 +87,7 @@
         "createdAt": { "$date": { "$numberLong": "1660338599350" } },
         "updatedAt": { "$date": { "$numberLong": "1660338627882" } },
         "__v": { "$numberInt": 0 },
-        "image": "/uploads/6.jpg",
+        "image": "https://sistema-de-usuarios-api.herokuapp.com/uploads/6.jpg",
         "emailVerified": true
     }
 ]
